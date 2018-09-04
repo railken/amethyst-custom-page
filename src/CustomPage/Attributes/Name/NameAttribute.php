@@ -22,14 +22,14 @@ class NameAttribute extends BaseAttribute
      *
      * @var bool
      */
-    protected $required = false;
+    protected $required = true;
 
     /**
      * Is the attribute unique.
      *
      * @var bool
      */
-    protected $unique = false;
+    protected $unique = true;
 
     /**
      * List of all exceptions used in validation.

@@ -28,6 +28,8 @@ class CustomPageManager extends ModelManager
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
         Attributes\DeletedAt\DeletedAtAttribute::class,
         Attributes\Html\HtmlAttribute::class,
+        Attributes\Url\UrlAttribute::class,
+        Attributes\Label\LabelAttribute::class,
     ];
 
     /**

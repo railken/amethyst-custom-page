@@ -26,6 +26,8 @@ class CustomPage extends Model implements EntityContract
     protected $fillable = [
         'name',
         'html',
+        'url',
+        'label',
     ];
 
     /**

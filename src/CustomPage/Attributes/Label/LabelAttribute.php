@@ -1,19 +1,19 @@
 <?php
 
-namespace Railken\LaraOre\CustomPage\Attributes\Html;
+namespace Railken\LaraOre\CustomPage\Attributes\Label;
 
 use Railken\Laravel\Manager\Attributes\BaseAttribute;
 use Railken\Laravel\Manager\Contracts\EntityContract;
 use Railken\Laravel\Manager\Tokens;
 
-class HtmlAttribute extends BaseAttribute
+class LabelAttribute extends BaseAttribute
 {
     /**
      * Name attribute.
      *
      * @var string
      */
-    protected $name = 'html';
+    protected $name = 'label';
 
     /**
      * Is the attribute required
@@ -36,18 +36,18 @@ class HtmlAttribute extends BaseAttribute
      * @var array
      */
     protected $exceptions = [
-        Tokens::NOT_DEFINED    => Exceptions\CustomPageHtmlNotDefinedException::class,
-        Tokens::NOT_VALID      => Exceptions\CustomPageHtmlNotValidException::class,
-        Tokens::NOT_AUTHORIZED => Exceptions\CustomPageHtmlNotAuthorizedException::class,
-        Tokens::NOT_UNIQUE     => Exceptions\CustomPageHtmlNotUniqueException::class,
+        Tokens::NOT_DEFINED    => Exceptions\CustomPageLabelNotDefinedException::class,
+        Tokens::NOT_VALID      => Exceptions\CustomPageLabelNotValidException::class,
+        Tokens::NOT_AUTHORIZED => Exceptions\CustomPageLabelNotAuthorizedException::class,
+        Tokens::NOT_UNIQUE     => Exceptions\CustomPageLabelNotUniqueException::class,
     ];
 
     /**
      * List of all permissions.
      */
     protected $permissions = [
-        Tokens::PERMISSION_FILL => 'custompage.attributes.html.fill',
-        Tokens::PERMISSION_SHOW => 'custompage.attributes.html.show',
+        Tokens::PERMISSION_FILL => 'custompage.attributes.label.fill',
+        Tokens::PERMISSION_SHOW => 'custompage.attributes.label.show',
     ];
 
     /**

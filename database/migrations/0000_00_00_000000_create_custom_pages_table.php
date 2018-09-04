@@ -15,6 +15,8 @@ class CreateCustomPagesTable extends Migration
         Schema::create(Config::get('ore.custom-page.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->text('label')->nullable();
+            $table->string('url');
             $table->text('html')->nullable();
             $table->timestamps();
             $table->softDeletes();

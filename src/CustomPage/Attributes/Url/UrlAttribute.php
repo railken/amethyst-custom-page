@@ -1,19 +1,20 @@
 <?php
 
-namespace Railken\LaraOre\CustomPage\Attributes\Html;
+namespace Railken\LaraOre\CustomPage\Attributes\Url;
 
 use Railken\Laravel\Manager\Attributes\BaseAttribute;
 use Railken\Laravel\Manager\Contracts\EntityContract;
 use Railken\Laravel\Manager\Tokens;
+use Respect\Validation\Validator as v;
 
-class HtmlAttribute extends BaseAttribute
+class UrlAttribute extends BaseAttribute
 {
     /**
      * Name attribute.
      *
      * @var string
      */
-    protected $name = 'html';
+    protected $name = 'url';
 
     /**
      * Is the attribute required
@@ -36,18 +37,18 @@ class HtmlAttribute extends BaseAttribute
      * @var array
      */
     protected $exceptions = [
-        Tokens::NOT_DEFINED    => Exceptions\CustomPageHtmlNotDefinedException::class,
-        Tokens::NOT_VALID      => Exceptions\CustomPageHtmlNotValidException::class,
-        Tokens::NOT_AUTHORIZED => Exceptions\CustomPageHtmlNotAuthorizedException::class,
-        Tokens::NOT_UNIQUE     => Exceptions\CustomPageHtmlNotUniqueException::class,
+        Tokens::NOT_DEFINED    => Exceptions\CustomPageUrlNotDefinedException::class,
+        Tokens::NOT_VALID      => Exceptions\CustomPageUrlNotValidException::class,
+        Tokens::NOT_AUTHORIZED => Exceptions\CustomPageUrlNotAuthorizedException::class,
+        Tokens::NOT_UNIQUE     => Exceptions\CustomPageUrlNotUniqueException::class,
     ];
 
     /**
      * List of all permissions.
      */
     protected $permissions = [
-        Tokens::PERMISSION_FILL => 'custompage.attributes.html.fill',
-        Tokens::PERMISSION_SHOW => 'custompage.attributes.html.show',
+        Tokens::PERMISSION_FILL => 'custompage.attributes.url.fill',
+        Tokens::PERMISSION_SHOW => 'custompage.attributes.url.show',
     ];
 
     /**
@@ -60,6 +61,6 @@ class HtmlAttribute extends BaseAttribute
      */
     public function valid(EntityContract $entity, $value)
     {
-        return true;
+        return v::length(1, 255)->validate($value);
     }
 }
