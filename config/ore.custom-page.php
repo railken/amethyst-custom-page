@@ -107,7 +107,7 @@ return [
             'enabled'    => true,
             'controller' => Railken\LaraOre\Http\Controllers\Admin\CustomPagesController::class,
             'router'     => [
-                'prefix' => '/admin/custom_pages',
+                'prefix' => '/admin/custom-pages',
             ],
         ],
     ],
