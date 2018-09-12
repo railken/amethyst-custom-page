@@ -29,6 +29,7 @@ class CustomPagesController extends RestConfigurableController
     public $queryable = [
         'id',
         'name',
+        'category',
         'label',
         'html',
         'url',
@@ -44,6 +45,7 @@ class CustomPagesController extends RestConfigurableController
      */
     public $fillable = [
         'name',
+        'category',
         'label',
         'html',
         'url',
