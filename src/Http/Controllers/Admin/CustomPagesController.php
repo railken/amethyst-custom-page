@@ -30,6 +30,7 @@ class CustomPagesController extends RestConfigurableController
         'id',
         'name',
         'category',
+        'config',
         'label',
         'html',
         'url',
@@ -46,6 +47,7 @@ class CustomPagesController extends RestConfigurableController
     public $fillable = [
         'name',
         'category',
+        'config',
         'label',
         'html',
         'url',

@@ -32,6 +32,7 @@ class CustomPageManager extends ModelManager
         Attributes\Label\LabelAttribute::class,
         Attributes\Description\DescriptionAttribute::class,
         Attributes\Category\CategoryAttribute::class,
+        Attributes\Config\ConfigAttribute::class,
     ];
 
     /**

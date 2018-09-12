@@ -20,6 +20,7 @@ class CreateCustomPagesTable extends Migration
             $table->string('url');
             $table->text('html')->nullable();
             $table->text('description')->nullable();
+            $table->text('config')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -30,6 +30,16 @@ class CustomPage extends Model implements EntityContract
         'label',
         'description',
         'category',
+        'config',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'config'     => 'object',
     ];
 
     /**
