@@ -18,6 +18,7 @@ class CreateCustomPagesTable extends Migration
             $table->text('label')->nullable();
             $table->string('url');
             $table->text('html')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

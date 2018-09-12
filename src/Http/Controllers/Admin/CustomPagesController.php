@@ -32,6 +32,7 @@ class CustomPagesController extends RestConfigurableController
         'label',
         'html',
         'url',
+        'description',
         'created_at',
         'updated_at',
     ];
@@ -46,5 +47,6 @@ class CustomPagesController extends RestConfigurableController
         'label',
         'html',
         'url',
+        'description',
     ];
 }

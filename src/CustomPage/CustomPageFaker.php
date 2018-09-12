@@ -25,6 +25,7 @@ class CustomPageFaker extends BaseFaker
         $bag->set('html', 'Welcome <p>test</p>');
         $bag->set('url', 'welcome');
         $bag->set('label', 'Welcome');
+        $bag->set('description', $faker->text);
 
         return $bag;
     }

@@ -30,6 +30,7 @@ class CustomPageManager extends ModelManager
         Attributes\Html\HtmlAttribute::class,
         Attributes\Url\UrlAttribute::class,
         Attributes\Label\LabelAttribute::class,
+        Attributes\Description\DescriptionAttribute::class,
     ];
 
     /**

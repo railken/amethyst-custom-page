@@ -28,6 +28,7 @@ class CustomPage extends Model implements EntityContract
         'html',
         'url',
         'label',
+        'description',
     ];
 
     /**
