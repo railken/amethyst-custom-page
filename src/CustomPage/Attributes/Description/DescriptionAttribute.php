@@ -28,7 +28,7 @@ class DescriptionAttribute extends BaseAttribute
      *
      * @var bool
      */
-    protected $required = false;
+    protected $required = true;
 
     /**
      * Is the attribute unique.
@@ -42,7 +42,7 @@ class DescriptionAttribute extends BaseAttribute
      *
      * @var bool
      */
-    protected $fillable = false;
+    protected $fillable = true;
 
     /**
      * List of all exceptions used in validation.
