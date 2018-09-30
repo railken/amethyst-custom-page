@@ -1,17 +1,10 @@
 {
-    "name": "railken/lara-ore-custom-page",
-    "keywords": ["laravel", "lara-ore", "lara-ore-custom-page", "custom-page"],
+    "name": "railken/amethyst-custom-page",
+    "keywords": ["laravel", "amethyst", "amethyst-custom-page", "custom-page"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/bag": "^1.2",
-        "railken/laravel-manager": "^3.0.3",
-        "fzaninotto/faker": "^1.7",
-        "railken/lara-ore-api": "dev-master",
-        "railken/lara-ore-support": "dev-master",
-        "railken/lara-ore-template": "dev-master",
-        "railken/lara-ore-file": "dev-master",
-        "railken/lara-ore-repository": "dev-master"
+        "railken/amethyst-common": "0.1.*"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.10",
@@ -21,18 +14,18 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\LaraOre\\" : "src/"
+            "Railken\\Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\LaraOre\\Tests\\": "tests/" 
+            "Railken\\Amethyst\\Tests\\": "tests/" 
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Railken\\LaraOre\\CustomPageServiceProvider"
+                "Railken\\Amethyst\\Providers\\CustomPageServiceProvider"
             ]
         }
     }

@@ -12,14 +12,14 @@ class CreateCustomPagesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('ore.custom-page.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.custom-page.managers.custom-page.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->text('description')->nullable();
             $table->string('category');
             $table->text('label')->nullable();
             $table->string('url');
             $table->text('html')->nullable();
-            $table->text('description')->nullable();
             $table->text('config')->nullable();
             $table->timestamps();
             $table->softDeletes();
@@ -31,6 +31,6 @@ class CreateCustomPagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('ore.custom-page.table'));
+        Schema::dropIfExists(Config::get('amethyst.custom-page.managers.custom-page.table'));
     }
 }
