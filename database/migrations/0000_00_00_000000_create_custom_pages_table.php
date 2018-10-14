@@ -12,7 +12,7 @@ class CreateCustomPagesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('amethyst.custom-page.managers.custom-page.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.custom-page.data.custom-page.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
@@ -31,6 +31,6 @@ class CreateCustomPagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('amethyst.custom-page.managers.custom-page.table'));
+        Schema::dropIfExists(Config::get('amethyst.custom-page.data.custom-page.table'));
     }
 }

@@ -2,23 +2,15 @@
 
 namespace Railken\Amethyst\Managers;
 
-use Illuminate\Support\Facades\Config;
+use Railken\Amethyst\Common\ConfigurableManager;
 use Railken\Lem\Manager;
 
 class CustomPageManager extends Manager
 {
-    /**
-     * Describe this manager.
-     *
-     * @var string
-     */
-    public $comment = '...';
+    use ConfigurableManager;
 
     /**
-     * Register Classes.
+     * @var string
      */
-    public function registerClasses()
-    {
-        return Config::get('amethyst.custom-page.managers.custom-page');
-    }
+    protected $config = 'amethyst.custom-page.data.custom-page';
 }
