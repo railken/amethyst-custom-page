@@ -25,9 +25,9 @@ class CustomPageTest extends BaseTest
     protected $group = 'admin';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.custom-page.http.admin.custom-page';
+    protected $route = 'admin.custom-page';
 }
