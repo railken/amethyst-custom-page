@@ -35,11 +35,11 @@ return [
     'http' => [
         'admin' => [
             'custom-page' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\Admin\CustomPagesController::class,
-                'router'      => [
-                    'as'        => 'custom-page.',
-                    'prefix'    => '/custom-pages',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\Admin\CustomPagesController::class,
+                'router'     => [
+                    'as'     => 'custom-page.',
+                    'prefix' => '/custom-pages',
                 ],
             ],
         ],
