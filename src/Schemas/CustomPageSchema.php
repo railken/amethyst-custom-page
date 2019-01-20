@@ -21,9 +21,11 @@ class CustomPageSchema extends Schema
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('description'),
             Attributes\LongTextAttribute::make('html'),
-            Attributes\TextAttribute::make('url'),
+            Attributes\TextAttribute::make('url')
+                ->setRequired(true),
             Attributes\TextAttribute::make('label'),
-            Attributes\TextAttribute::make('category'),
+            Attributes\TextAttribute::make('category')
+                ->setRequired(true),
             Attributes\ObjectAttribute::make('config'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
